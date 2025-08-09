@@ -1,0 +1,12 @@
+# Ignore Git files
+.git/
+.gitignore
+.dockerignore
+
+# Ignore virtual environment and cache
+env/
+__pycache__/
+
+# Ignore notebooks and other non-production files
+notebooks/
+README.md
