@@ -1,8 +1,17 @@
+---
+title: Cat vs Dog Classifier
+emoji: 🐾
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # 🐾 Cat vs. Dog Image Classifier API
 
 This project is an end-to-end deep learning application that trains a computer vision model to classify images of cats and dogs, then serves the model via a production-ready REST API.
 
-This project was built as part of my AI Engineer journey and demonstrates the full development lifecycle: from initial experimentation in a Jupyter Notebook to a containerized, deployable web application.
+This project was built as part of my journey to become an AI Engineer and demonstrates the full development lifecycle: from initial experimentation in a Jupyter Notebook to a containerized, deployable web application.
 
 ---
 
@@ -39,7 +48,10 @@ This project was built as part of my AI Engineer journey and demonstrates the fu
 2.  **Create and activate a virtual environment:**
     ```bash
     python -m venv env
+    # On Windows
     .\env\Scripts\activate
+    # On MacOS/Linux
+    source env/bin/activate
     ```
 
 3.  **Install dependencies:**
