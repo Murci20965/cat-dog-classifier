@@ -1,0 +1,16 @@
+# Virtual Environment
+env/
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Large model files
+# Best practice is to not track these directly in Git.
+*.pkl
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
