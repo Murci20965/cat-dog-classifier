@@ -6,7 +6,7 @@ This project was built as part of my AI Engineer journey and demonstrates the fu
 
 ---
 
-## ## Features
+## Features
 * **Deep Learning Model**: Utilizes a Convolutional Neural Network (CNN) built with the **FastAI** library.
 * **REST API**: A robust API built with **FastAPI** to serve the model's predictions.
 * **Containerized**: Fully containerized with **Docker** for consistent, reproducible deployments.
@@ -14,7 +14,7 @@ This project was built as part of my AI Engineer journey and demonstrates the fu
 
 ---
 
-## ## Technologies Used
+## Technologies Used
 - **Python 3.11**
 - **Deep Learning**: FastAI & PyTorch
 - **API**: FastAPI & Uvicorn
@@ -22,13 +22,13 @@ This project was built as part of my AI Engineer journey and demonstrates the fu
 
 ---
 
-## ## Getting Started Locally
+## Getting Started Locally
 
-### ### Prerequisites
+### Prerequisites
 - Python 3.11
 - Docker Desktop
 
-### ### Installation & Setup
+### Installation & Setup
 
 1.  **Clone the repository:**
     ```bash
