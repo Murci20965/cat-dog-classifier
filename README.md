@@ -1,3 +1,12 @@
+---
+title: Cat vs Dog Classifier
+emoji: 🐾
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # 🐾 Cat vs. Dog Image Classifier API
 
 This project is an end-to-end deep learning application that trains a computer vision model to classify images of cats and dogs, then serves the model via a production-ready REST API.
