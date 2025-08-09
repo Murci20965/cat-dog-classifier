@@ -24,7 +24,7 @@ This project was built as part of my AI Engineer journey and demonstrates the fu
 
 ## Getting Started Locally
 
-### ### Prerequisites
+### Prerequisites
 - Python 3.11
 - Docker Desktop
 
