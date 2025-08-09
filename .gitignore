@@ -8,7 +8,7 @@ __pycache__/
 
 # Large model files
 # Best practice is to not track these directly in Git.
-*.pkl
+# *.pkl
 
 # IDE and OS files
 .vscode/
