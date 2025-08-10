@@ -5,6 +5,10 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from .inference import predict_image  # Use a relative import
 
+# Import Gradio UI factory and mounting helper
+import gradio as gr
+from .ui import build_gradio_interface
+
 # Create the FastAPI app object
 app = FastAPI(
     title="Cat vs. Dog Classifier API",
@@ -24,7 +28,7 @@ app.add_middleware(
 # Define the root endpoint
 @app.get("/")
 def read_root():
-    return {"message": "Welcome! Navigate to /docs to test the API."}
+    return {"message": "Welcome! Navigate to /docs to test the API or /ui for the demo."}
 
 # Simple health check endpoint
 @app.get("/health")
@@ -51,3 +55,7 @@ async def predict(image: UploadFile = File(...)):
     except Exception as exc:
         # Unexpected errors
         return JSONResponse(status_code=500, content={"detail": "Internal server error during prediction."})
+
+# Build and mount the Gradio UI under /ui for an interactive demo
+ui_app = build_gradio_interface()
+app = gr.mount_gradio_app(app, ui_app, path="/ui")

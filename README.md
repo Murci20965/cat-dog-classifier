@@ -7,9 +7,9 @@ sdk: docker
 pinned: false
 ---
 
-# 🐾 Cat vs. Dog Image Classifier API
+# 🐾 Cat vs. Dog Image Classifier API + UI
 
-This project is an end-to-end deep learning application that trains a computer vision model to classify images of cats and dogs, then serves the model via a production-ready REST API.
+This project is an end-to-end deep learning application that trains a computer vision model to classify images of cats and dogs, then serves the model via a production-ready REST API and an integrated Gradio UI.
 
 This project was built as part of my journey to become an AI Engineer and demonstrates the full development lifecycle: from initial experimentation in a Jupyter Notebook to a containerized, deployable web application.
 
@@ -18,6 +18,7 @@ This project was built as part of my journey to become an AI Engineer and demons
 ## Features
 * **Deep Learning Model**: Utilizes a Convolutional Neural Network (CNN) built with the **FastAI** library.
 * **REST API**: A robust API built with **FastAPI** to serve the model's predictions.
+* **Gradio UI**: A polished, user-friendly interface available at `/ui` for quick manual testing and demos.
 * **Containerized**: Fully containerized with **Docker** for consistent, reproducible deployments.
 * **Interactive Docs**: Automatic API documentation provided by FastAPI at the `/docs` endpoint.
 
@@ -25,8 +26,9 @@ This project was built as part of my journey to become an AI Engineer and demons
 
 ## Technologies Used
 - **Python 3.11**
-- **Deep Learning**: FastAI & PyTorch
+- **Deep Learning**: FastAI & PyTorch (CPU wheels)
 - **API**: FastAPI & Uvicorn
+- **UI**: Gradio
 - **Containerization**: Docker
 
 ---
@@ -41,7 +43,7 @@ This project was built as part of my journey to become an AI Engineer and demons
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Murci20965/cat-dog-classifier.git](https://github.com/Murci20965/cat-dog-classifier.git)
+    git clone https://github.com/Murci20965/cat-dog-classifier.git
     cd cat-dog-classifier
     ```
 
@@ -74,4 +76,31 @@ This project was built as part of my journey to become an AI Engineer and demons
     uvicorn app.main:app --reload
     ```
 
-Once running, the API documentation is available at `http://127.0.0.1:8000/docs`.
+Once running:
+- API docs are available at `http://127.0.0.1:8000/docs`
+- Gradio UI is available at `http://127.0.0.1:8000/ui`
+- Health check at `http://127.0.0.1:8000/health`
+
+---
+
+## API Summary
+- `GET /`: Welcome message
+- `GET /health`: Health check
+- `POST /predict`: Multipart file upload (field name: `image`). Returns `{ "prediction": "Cat|Dog", "probability": "<float>" }`.
+
+---
+
+## Notes on Model & Environment
+- The exported FastAI learner is loaded once at startup for efficiency.
+- The container uses CPU-only PyTorch wheels to reduce image size and avoid CUDA dependencies.
+- The server binds to `$PORT` if provided (e.g., on Hugging Face Spaces), defaulting to `7860` otherwise.
+
+---
+
+## Hugging Face Spaces
+If deploying on Spaces, this repository’s Dockerfile already supports `$PORT`. Ensure the model file `cat_dog_classifier_v1.pkl` is available (Git LFS or Space storage). Rebuild/restart the Space after pushing changes.
+
+---
+
+## License
+MIT
