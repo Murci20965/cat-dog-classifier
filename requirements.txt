@@ -84,8 +84,8 @@ sympy==1.14.0
 thinc==8.3.6
 threadpoolctl==3.6.0
 tomlkit==0.13.3
-torch==2.8.0
-torchvision==0.23.0
+torch==2.8.0+cpu
+torchvision==0.23.0+cpu
 tqdm==4.67.1
 typer==0.16.0
 typing-inspection==0.4.1
