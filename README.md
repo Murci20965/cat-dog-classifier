@@ -9,11 +9,11 @@ pinned: false
 
 # 🐾 Cat vs. Dog Image Classifier
 
-[![Python](https://img-shields.io/badge/Python-3.11%2B-blue?logo=python)](https://www.python.org/)
-[![FastAI](https://img-shields.io/badge/FastAI-2.7%2B-red?logo=fastai)](https://docs.fast.ai/)
-[![FastAPI](https://img-shields.io/badge/FastAPI-Ready-brightgreen?logo=fastapi)](https://fastapi.tiangolo.com/)
-[![Docker](https://img-shields.io/badge/Docker-Containerized-blue?logo=docker)](https://www.docker.com/)
-[![License: MIT](https://img-shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-blue?logo=python)](https://www.python.org/)
+[![FastAI](https://img.shields.io/badge/FastAI-2.7%2B-red?logo=fastai)](https://docs.fast.ai/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Ready-brightgreen?logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Docker](https://img.shields.io/badge/Docker-Containerized-blue?logo=docker)](https://www.docker.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An **end-to-end** deep learning application that classifies images of cats and dogs.  
 This project demonstrates the full MLOps lifecycle, from training a model with **FastAI** to deploying it as a containerized web application with **FastAPI** and a **Gradio** user interface.
